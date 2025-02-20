@@ -35,12 +35,16 @@ Testing: Pytest
 Clone the Repository
 
 git clone https://github.com/your-username/library-management-backend.git
+
 cd library-management-backend
 
 3️⃣ Create a Virtual Environment & Install Dependencies
 
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  
+
+# On Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
 
 4️⃣ Set Up Environment Variables
@@ -48,8 +52,11 @@ pip install -r requirements.txt
 Create a .env file in the root directory and add the following:
 
 DATABASE_URL=postgresql://user:password@localhost/library_db
+
 SECRET_KEY=your_jwt_secret_key
+
 ALGORITHM=HS256
+
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 5️⃣ Run Database Migrations
