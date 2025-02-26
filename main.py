@@ -52,6 +52,9 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm="HS256")
     return encoded_jwt
 
+@app.get("/")
+async def welcome():
+    return {"message": "Hello Brahmjot, welcome to the Library Management System server! 🚀"}
 # ---------------- User Auth ----------------
 @app.post("/signup")
 async def signup(user: UserCreate, db: AsyncSession = Depends(get_db)):
