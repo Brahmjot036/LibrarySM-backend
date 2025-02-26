@@ -202,6 +202,8 @@ async def startup():
     from models import Base
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+    print("Hello Brahmjot, welcome to the Library Management System server! 🚀")
+
 # Add this endpoint at the end of main.py (after other endpoints)
 @app.get("/dashboard_data")
 async def dashboard_data(db: AsyncSession = Depends(get_db)):
